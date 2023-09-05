@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        lora: "'DM Mono', monospace",
+        spartan: "'League Spartan', sans-serif",
+      },
+    },
   },
   plugins: [],
 };
