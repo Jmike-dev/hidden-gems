@@ -7,6 +7,13 @@ module.exports = {
         lora: "'DM Mono', monospace",
         spartan: "'League Spartan', sans-serif",
       },
+      colors: {
+        primary: {
+          indigo: "#6366F1",
+          teal: "#E0F5F6",
+          darkgreen: "#349097",
+        },
+      },
     },
   },
   plugins: [],
