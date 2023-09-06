@@ -7,8 +7,14 @@ import { HomePageComponent } from './pages/home/home-page/home-page.component';
 import { RestaurantsPageComponent } from './pages/restaurants/restaurants-page/restaurants-page.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { AboutComponent } from './pages/about/about/about.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule ,Routes} from '@angular/router';
 
+// defining routes
+const routes: Routes = [
+  { path: 'home', component: HomePageComponent },
+  { path: 'about', component: AboutComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,10 +26,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot([
-      {path:'home', component: HomePageComponent},
-      {path:'about', component: AboutComponent},
-    ])
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
