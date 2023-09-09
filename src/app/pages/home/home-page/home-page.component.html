@@ -1,65 +1,63 @@
-
+<div
+  class="w-full bg-indigo-800 md:flex md:flex-col md:pt-6 rounded-t-xl max-h-full"
+>
+  <!-- h1 div -->
   <div
-    class="w-full bg-indigo-800 md:flex md:flex-col md:pt-6 rounded-t-xl max-h-full"
+    class="font-spartan text-2xl p-4 font-bold text-primary-teal md:text-6xl sm:text-4xl flex justify-center content-center"
   >
-    <!-- h1 div -->
-    <div
-      class="font-spartan text-2xl p-4 font-bold text-primary-teal md:text-6xl sm:text-4xl flex justify-center content-center"
-    >
-      <h1>
-        Looking for a place to eat?
+    <h1>
+      Looking for a place to eat?
+      <hr
+        class="w-1/3 justify-center text-center content-center flex bg-primary-darkgreen md:h-3 h-1"
+      />
+    </h1>
+  </div>
+  <!-- image div -->
+  <div
+    class="justify-center content-center flex pt-2 pb-2 text-primary-teal md:text-7xl text-3xl sm:text-4xl font-spartan font-bold"
+  >
+    <div class="w-1/3 text-center md:pt-48 pt-10">
+      <h1 class="md:contents">
+        look
         <hr
-          class="w-1/3 justify-center text-center content-center flex bg-primary-darkgreen md:h-3 h-1"
+          class="w-1/3 justify-center text-center content-center flex bg-primary-darkgreen md:h-3 h-1 md:ml-36 ml-11 sm:ml-20"
         />
       </h1>
     </div>
-    <!-- image div -->
+    <img
+      src="../../../../assets/svg/undraw-searchpic.svg"
+      class="w-1/3 rounded-md md:h-auto"
+    />
+    <div class="w-1/3 text-center md:pt-48 pt-10">
+      <h1 class="md:contents">no further</h1>
+    </div>
+  </div>
+</div>
+<!-- svg and button div -->
+<div class="bg-indigo-800 grid grid-cols-2">
+  <!-- lottie svg div -->
+  <div class="lottie-animation mt-10">
+    <ng-lottie [options]="options" (animationCreated)="onAnimate($event)">
+    </ng-lottie>
+    <!-- arrow text div -->
     <div
-      class="justify-center content-center flex pt-2 pb-2 text-primary-teal md:text-7xl text-3xl sm:text-4xl font-spartan font-bold"
+      class="md:-mt-36 font-spartan md:text-6xl sm:text-4xl -mt-12 ml-16 md:ml-44 text-primary-teal font-bold text-2xl sm:-mt-20"
     >
-      <div class="w-1/3 text-center md:pt-48 pt-10">
-        <h1 class="md:contents">
-          look
-          <hr
-            class="w-1/3 justify-center text-center content-center flex bg-primary-darkgreen md:h-3 h-1 md:ml-36 ml-11 sm:ml-20"
-          />
-        </h1>
-      </div>
-      <img
-        src="../../../../assets/svg/undraw-searchpic.svg"
-        class="w-1/3 rounded-md md:h-auto"
-      />
-      <div class="w-1/3 text-center md:pt-48 pt-10">
-        <h1 class="md:contents">no further</h1>
-      </div>
+      <h1 class="bg-red">
+        Search now
+        <hr
+          class="w-16 md:w-1/3 justify-center text-center content-center flex bg-primary-darkgreen md:h-3 h-1"
+        />
+      </h1>
     </div>
   </div>
-  <!-- svg and button div -->
-  <div class="bg-indigo-800 grid grid-cols-2 ">
-    <!-- lottie svg div -->
-    <div class="lottie-animation mt-10">
-      <ng-lottie [options]="options" (animationCreated)="onAnimate($event)">
-      </ng-lottie>
-      <!-- arrow text div -->
-      <div
-        class="md:-mt-36 font-spartan md:text-6xl sm:text-4xl -mt-12 ml-16 md:ml-44 text-primary-teal font-bold text-2xl sm:-mt-20 "
-      >
-        <h1 class="bg-red">
-          Search now
-          <hr
-            class="w-16 md:w-1/3 justify-center text-center content-center flex bg-primary-darkgreen md:h-3 h-1"
-          />
-        </h1>
-      </div>
-    </div>
-    <!-- button div -->
-    <div class="md:pt-72 pt-32  sm:pt-40">
-      <a
-        class="font-spartan md:p-6 bg-primary-darkgreen md:text-6xl  p-3 text-2xl hover:text-indigo-950 text-primary-teal hover:bg-teal-400 duration-300 ease-in-out  sm:text-4xl  rounded-md  outline-none focus:ring-4  transform active:scale-y-75 transition-transform  "
-        routerLink="/restaurants"
-      >
-        Restaurants</a
-      >
-    </div>
+  <!-- button div -->
+  <div class="md:pt-72 pt-32 sm:pt-40">
+    <a
+      class="font-spartan md:p-6 bg-primary-darkgreen md:text-6xl p-3 text-2xl hover:text-indigo-950 text-primary-teal hover:bg-teal-400 duration-300 ease-in-out sm:text-4xl rounded-md outline-none focus:ring-4 transform active:scale-y-75 transition-transform"
+      routerLink="/restaurants"
+    >
+      Restaurants</a
+    >
   </div>
-
+</div>
