@@ -8,8 +8,8 @@ import { RestaurantsPageComponent } from './pages/restaurants/restaurants-page/r
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { AboutComponent } from './pages/about/about/about.component';
 import { RouterModule, Routes } from '@angular/router';
-// import { LottieModule } from 'ngx-lottie';
-// import player from 'lottie-web';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
 
 // defining routes
 const routes: Routes = [
@@ -19,9 +19,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 // setting up lottie
-// export function playerFactory() {
-//   return player;
-// }
+export function playerFactory() {
+  return player;
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,7 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    // LottieModule.forRoot({ player: playerFactory }),
+    LottieModule.forRoot({ player: playerFactory }),
   ],
   providers: [],
   bootstrap: [AppComponent],

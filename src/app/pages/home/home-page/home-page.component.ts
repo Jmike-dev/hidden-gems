@@ -1,5 +1,6 @@
 // import { AnimationOptions } from '@angular/animations';
 import { Component } from '@angular/core';
+// import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie/lib/symbols';
 
 @Component({
