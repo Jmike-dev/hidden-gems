@@ -10,6 +10,7 @@ import { AboutComponent } from './pages/about/about/about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import {HttpClientModule} from '@angular/common/http';
 
 // defining routes
 const routes: Routes = [
@@ -32,6 +33,7 @@ export function playerFactory() {
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
     LottieModule.forRoot({ player: playerFactory }),
