@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient,HttpHeaders } from '@angular/common/http';
-
+import { HttpClient } from '@angular/common/http';
+import { enviroment } from 'src/enviroments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FoodsService {
-  url = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=';
-  apiKey = '61c44b1fb7e54cc380860385c02a6d6e';
-  constructor( ) {}
+  private apiUrl = enviroment.apiUrl;
+
+  constructor(private http: HttpClient) {}
+  getRecipes():Observable<[]> {
+    return this.http.get<[]>(`${this.apiUrl}`)
+  }
 }

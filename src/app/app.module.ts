@@ -11,12 +11,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import {HttpClientModule} from '@angular/common/http';
+import { MealsComponent } from './pages/meals/meals.component';
 
 // defining routes
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'about', component: AboutComponent },
   { path: 'restaurants', component: RestaurantsPageComponent },
+  { path: 'meals', component: MealsComponent  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 // setting up lottie
@@ -30,6 +32,7 @@ export function playerFactory() {
     RestaurantsPageComponent,
     NavbarComponent,
     AboutComponent,
+    MealsComponent,
   ],
   imports: [
     BrowserModule,
