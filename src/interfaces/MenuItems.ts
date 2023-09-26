@@ -4,3 +4,12 @@ export interface MenuItemInstance {
   image: string;
   restaurantChain: string;
 }
+
+export interface ResponseInstance {
+  menuItems: MenuItemInstance[];
+  number: number;
+  offset: number;
+  type: string;
+  processingTimeMs: number;
+  totalMenuItems: number;
+}
