@@ -1,1 +1,17 @@
-<p>meals works!</p>
+<form (ngSubmit)="search()">
+  <div>
+    <label for="mealSearch">Search Meal</label>
+    <input
+      [(ngModel)]="mealInput"
+      name="mealInput"
+      type="text"
+      placeholder="enter text here"
+      class="block w-1/2 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    />
+  </div>
+  <input
+    type="submit"
+    value="search"
+    class="bg-primary-indigo text-primary-teal"
+  />
+</form>
