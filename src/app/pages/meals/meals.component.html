@@ -15,3 +15,13 @@
     class="bg-primary-indigo text-primary-teal"
   />
 </form>
+<div>
+  <div *ngIf="meals">
+    <h1>MEALS</h1>
+    <div *ngFor="let meal of meals">
+      <div>
+        <h2 class="bg-red-300">{{ meal.title }}</h2>
+      </div>
+    </div>
+  </div>
+</div>
