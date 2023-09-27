@@ -1,26 +1,57 @@
-<form (ngSubmit)="search()">
-  <div>
-    <label for="mealSearch">Search Meal</label>
+<div
+  class="w-full h-screen"
+  style="
+    background-image: url(&quot;../../../assets/images/circle-scatter-haikei.png&quot;);
+    background-size: cover;
+  "
+>
+  <form (ngSubmit)="search()" class="p-3 flex justify-center font-spartan">
+    <!-- input div  -->
+    <div class="relative">
+      <!-- text input -->
+      <input
+        [(ngModel)]="mealInput"
+        name="mealInput"
+        type="text"
+        placeholder="enter text here"
+        class="block p-4 pl-10 text-base text-black border border-teal-300 rounded-xl focus:ring-blue-500 focus:border-blue-500 bg-indigo-100 dark:border-teal-800 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:mt-2 md:mt-0"
+      />
+    </div>
+    <!-- submit button -->
     <input
-      [(ngModel)]="mealInput"
-      name="mealInput"
-      type="text"
-      placeholder="enter text here"
-      class="block w-1/2 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      type="submit"
+      value="Search"
+      class=" absolute right-24 top-16 md:right-[33rem] md:top-20 sm:right-52 sm:top-20  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base p-2 dark:focus:ring-blue-800 bg-teal-400  hover:bg-primary-indigo text-green-950 hover:text-primary-teal"
     />
-  </div>
-  <input
-    type="submit"
-    value="search"
-    class="bg-primary-indigo text-primary-teal"
-  />
-</form>
-<div>
-  <div *ngIf="meals">
-    <h1>MEALS</h1>
-    <div *ngFor="let meal of meals">
-      <div>
-        <h2 class="bg-red-300">{{ meal.title }}</h2>
+  </form>
+  <div
+    class="font-spartan"
+    style="
+      background-image: url(&quot;../../../assets/images/circle-scatter-haikei.png&quot;);
+      background-size: cover;
+    "
+  >
+    <div *ngIf="meals" class="grid grid-cols-2 gap-2 md:grid-cols-5">
+      <div *ngFor="let meal of meals">
+        <div
+          class="bg-indigo-600 rounded-lg text-base m-4 flex flex-col h-60 md:h-80 max-w-sm border border-indigo-600 shadow"
+        >
+          <!-- image div -->
+          <div class="">
+            <img
+              src="{{ meal.image }}"
+              class="rounded-t-lg w-full hover:scale-110 transition duration-500 cursor-pointer"
+            />
+          </div>
+          <!-- text box -->
+          <div class="p-2">
+            <h2
+              class="mb-2 text-base font-bold tracking-tight text-gray-900 dark:text-primary-teal"
+            >
+              {{ meal.title }}
+            </h2>
+          </div>
+        </div>
       </div>
     </div>
   </div>

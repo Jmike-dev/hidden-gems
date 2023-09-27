@@ -12,6 +12,10 @@ export class MealsComponent {
   mealInput!: string;
   meals: MenuItemInstance[] | undefined;
   search() {
+    if (!this.mealInput) {
+      alert('please enter meal');
+      return;
+    }
     this.foodService.searchMeals(this.mealInput).subscribe((data) => {
       console.log(data);
       this.meals = data.menuItems;
