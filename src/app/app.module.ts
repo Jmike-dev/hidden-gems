@@ -15,6 +15,7 @@ import { RestaurantsPageComponent } from './pages/restaurants/restaurants-page/r
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { AboutComponent } from './pages/about/about/about.component';
 import { MealsComponent } from './pages/meals/meals.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 // defining routes
 const routes: Routes = [
@@ -36,6 +37,7 @@ export function playerFactory() {
     NavbarComponent,
     AboutComponent,
     MealsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
