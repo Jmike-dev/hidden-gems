@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "hidden-gems-9cca6"
-  }
+    "default": "food-website-2cb33",
+    "food-website": "food-website-2cb33"
+  },
+  "targets": {},
+  "etags": {}
 }
