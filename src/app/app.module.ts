@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LottieModule } from 'ngx-lottie';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import player from 'lottie-web';
 //  components
 import { AppComponent } from './app.component';
@@ -43,6 +43,7 @@ export function playerFactory() {
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FontAwesomeModule,
     FormsModule,
     RouterModule.forRoot(routes),
     LottieModule.forRoot({ player: playerFactory }),
