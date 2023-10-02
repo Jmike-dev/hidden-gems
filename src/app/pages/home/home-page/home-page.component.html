@@ -52,13 +52,18 @@
     </div>
   </div>
   <!-- button div -->
-  <div class="md:pt-72 pt-32 sm:pt-40">
-    <a
-      class="font-spartan md:p-6 bg-primary-darkgreen md:text-6xl p-3 text-2xl hover:text-indigo-950 text-primary-teal hover:bg-teal-400 duration-300 ease-in-out sm:text-4xl rounded-md outline-none focus:ring-4 transform active:scale-y-75 transition-transform"
-      routerLink="/meals"
-    >
-      Meals</a
-    >
+  <div class="md:pt-64 pt-32 sm:pt-40">
+    <a routerLink="/meals" class="relative inline-block px-4 py-2 font-medium group text-4xl font-spartan">
+      <span
+        class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-indigo-300 group-hover:-translate-x-0 group-hover:-translate-y-0 rounded-lg"
+      ></span>
+      <span
+        class="absolute inset-0 w-full h-full bg-teal-200 border-2 border-teal-50 group-hover:bg-indigo-600 rounded-lg"
+      ></span>
+      <span class="relative text-indigo-950 group-hover:text-primary-teal"
+        >Meal</span
+      >
+    </a>
   </div>
 </div>
 <app-footer></app-footer>
