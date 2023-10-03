@@ -5,7 +5,7 @@
     background-size: cover;
   "
 >
-  <form (ngSubmit)="search()" class="p-3 flex justify-center font-spartan">
+  <form (ngSubmit)="search()" class="p-4 flex justify-center font-spartan">
     <!-- input div  -->
     <div class="relative">
       <!-- text input -->
@@ -16,13 +16,13 @@
         placeholder="enter text here"
         class="block p-4 pl-10 text-base text-black border border-teal-300 rounded-xl focus:ring-blue-500 focus:border-blue-500 bg-indigo-100 dark:border-teal-800 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500 sm:mt-2 md:mt-0"
       />
+      <!-- submit button -->
+      <input
+        type="submit"
+        value="Search"
+        class="absolute top-2 right-1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base p-2 dark:focus:ring-blue-800 bg-teal-400 hover:bg-primary-indigo text-green-950 hover:text-primary-teal"
+      />
     </div>
-    <!-- submit button -->
-    <input
-      type="submit"
-      value="Search"
-      class=" absolute right-24 top-16 md:right-[33rem] md:top-20 sm:right-52 sm:top-20  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base p-2 dark:focus:ring-blue-800 bg-teal-400  hover:bg-primary-indigo text-green-950 hover:text-primary-teal"
-    />
   </form>
   <div
     class="font-spartan"
