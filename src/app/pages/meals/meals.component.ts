@@ -17,7 +17,6 @@ export class MealsComponent {
       return;
     }
     this.foodService.searchMeals(this.mealInput).subscribe((data) => {
-      console.log(data);
       this.meals = data.menuItems;
     });
   }
