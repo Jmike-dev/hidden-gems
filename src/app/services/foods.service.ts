@@ -15,7 +15,7 @@ export class FoodsService {
 
   searchMeals(query: string): Observable<ResponseInstance> {
     let data = this.http.get<ResponseInstance>(
-      `${this.apiSearchUrl}?apiKey=${this.apiKey}&query=${query}`,
+      `${this.apiSearchUrl}/food/menuItems/search?apiKey=${this.apiKey}&query=${query}`,
     );
     return data;
   }
