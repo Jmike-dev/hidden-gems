@@ -1,15 +1,13 @@
-export interface MenuItemInstance {
-  id: number;
-  title: string;
-  image: string;
-  restaurantChain: string;
-}
 
+export interface ResultInstance {
+  id: number;
+  title:string;
+  image:string;
+  imageType:string;
+}
 export interface ResponseInstance {
-  menuItems: MenuItemInstance[];
-  number: number;
+  results: ResultInstance[];
   offset: number;
-  type: string;
-  processingTimeMs: number;
-  totalMenuItems: number;
+  number: number;
+  totalResults: number;
 }
