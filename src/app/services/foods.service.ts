@@ -13,10 +13,11 @@ export class FoodsService {
 
   constructor(private http: HttpClient) {}
 
-  searchMeals(query: string): Observable<ResponseInstance> {
+
+  searchMeals(query: string): Observable<ResponseInstance>{
     let data = this.http.get<ResponseInstance>(
-      `${this.apiSearchUrl}/food/menuItems/search?apiKey=${this.apiKey}&query=${query}`,
+      `${this.apiSearchUrl}/recipes/complexSearch?apiKey=${this.apiKey}&query=${query}`,
     );
-    return data;
+    return data
   }
 }
