@@ -1,38 +1,35 @@
-<nav
-  class="w-full p-2 bg-primary-teal md:flex md:justify-center md:items-center md:space-x-10 space-x-3 rounded-b-xl font-spartan font-bold"
->
-  <a routerLink="/home"  class="relative inline-block text-2xl group">
-    <span
-      class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-indigo-500 rounded-lg group-hover:text-teal-50"
-    >
-      <span
-        class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-teal-500"
-      ></span>
-      <span
-        class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-indigo-500 group-hover:-rotate-180 ease"
-      ></span>
-      <span class="relative">home</span>
-    </span>
-    <span
-      class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-indigo-500 rounded-lg group-hover:mb-0 group-hover:mr-0"
-      data-rounded="rounded-lg"
-    ></span>
-  </a>
-  <a routerLink="/about"  class="relative inline-block text-2xl group">
-    <span
-      class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-indigo-500 rounded-lg group-hover:text-teal-50"
-    >
-      <span
-        class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-teal-500"
-      ></span>
-      <span
-        class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-indigo-500 group-hover:-rotate-180 ease"
-      ></span>
-      <span class="relative">About</span>
-    </span>
-    <span
-      class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-indigo-500 rounded-lg group-hover:mb-0 group-hover:mr-0"
-      data-rounded="rounded-lg"
-    ></span>
-  </a>
+
+
+<nav class="w-full font-spartan">
+  <div class="w-full  flex justify-center items-center py-4 text-3xl">
+    <div class="flex justify-center  w-3/4  text-colors-text">
+      <div class=" px-20 ">
+        <a routerLink="/home"> Home</a>
+      </div>
+      <div class=" px-20">
+        <a routerLink="/about"> About</a>
+      </div>
+    </div>
+
+    <div class="w-1/4  flex justify-center">
+      <a
+        routerLink="/meals"
+        class="relative inline-flex items-center justify-start px-4 py-2 overflow-hidden font-bold rounded-full group"
+      >
+        <span
+          class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-colors-accent opacity-[3%]"
+        ></span>
+        <span
+          class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-colors-accent opacity-100 group-hover:-translate-x-8"
+        ></span>
+        <span
+          class="relative w-full text-left text-colors-text transition-colors duration-200 ease-in-out group-hover:text-gray-900"
+          >Search</span
+        >
+        <span
+          class="absolute inset-0 border-2 border-colors-accent rounded-full"
+        ></span>
+      </a>
+    </div>
+  </div>
 </nav>
