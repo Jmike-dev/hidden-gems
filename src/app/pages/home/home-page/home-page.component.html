@@ -1,69 +1,48 @@
-<div
-  class="w-full bg-indigo-800 md:flex md:flex-col md:pt-6 rounded-t-xl max-h-full"
->
-  <!-- h1 div -->
+<div class="relative sm:max-w-7xl max-w-sm mx-auto sm:my-20 my-10">
+  <img
+    class="h-96 w-full object-cover rounded-xl"
+    src="../../../../assets/images/cookingpic2.jpg"
+    alt="Random image"
+  />
+  <div class="absolute inset-0 bg-gray-700 opacity-60 rounded-xl"></div>
   <div
-    class="font-spartan text-2xl p-4 font-bold text-primary-teal md:text-6xl sm:text-4xl flex justify-center content-center"
+    class="absolute inset-0 flex flex-col items-center justify-center text-center"
   >
-    <h1>
-      Looking for your next meal?
-      <hr
-        class="w-1/3 justify-center text-center content-center flex bg-primary-darkgreen md:h-3 h-1"
-      />
-    </h1>
-  </div>
-  <!-- image div -->
-  <div
-    class="justify-center content-center flex pt-2 pb-2 text-primary-teal md:text-7xl text-3xl sm:text-4xl font-spartan font-bold"
-  >
-    <div class="w-1/3 text-center md:pt-48 pt-10">
-      <h1 class="md:contents">
-        look
-        <hr
-          class="w-1/3 justify-center text-center content-center flex bg-primary-darkgreen md:h-3 h-1 md:ml-36 ml-11 sm:ml-20"
-        />
-      </h1>
-    </div>
-    <img
-      src="../../../../assets/svg/undraw-searchpic.svg"
-      class="w-1/3 rounded-md md:h-auto"
-    />
-    <div class="w-1/3 text-center md:pt-48 pt-10">
-      <h1 class="md:contents">no further</h1>
+    <h2 class="text-white text-3xl font-bold sm:text-5xl">
+      Cook Delicious Food With Amazing Recipes
+    </h2>
+    <div class="mt-10">
+      <a
+        routerLink="/meals"
+        class="relative inline-flex items-center justify-start px-5 py-3 overflow-hidden font-medium transition-all bg-colors-secondary rounded-full hover:bg-colors-accent group"
+      >
+        <span
+          class="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-colors-accent rounded-full"
+        ></span>
+        <span
+          class="relative w-full text-left text-colors-text transition-colors duration-200 ease-in-out group-hover:text-colors-primary sm:text-2xl text-xl"
+          >Try Now</span
+        >
+      </a>
     </div>
   </div>
 </div>
-<!-- svg and button div -->
-<div class="bg-indigo-800 grid grid-cols-2">
-  <!-- lottie svg div -->
-  <div class="lottie-animation mt-10 md:mt-0">
-    <ng-lottie [options]="options"> </ng-lottie>
-    <!-- arrow text div -->
-    <!-- <img src="../../../../assets/icons/icons8-right-90.png" > -->
-    <div
-      class="md:-mt-36 font-spartan md:text-6xl sm:text-4xl -mt-12 ml-16 md:ml-44 text-primary-teal font-bold text-2xl sm:-mt-20"
-    >
-      <h1>
-        Search now
-        <hr
-          class="w-16 md:w-1/3 justify-center text-center content-center flex bg-primary-darkgreen md:h-3 h-1"
-        />
+<div>
+  <div
+    class="relative sm:max-w-screen-2xl max-w-sm mx-auto sm:my-20 my-10 rounded-xl bg-colors-secondary flex h-5/6 text-colors-text font-spartan flex-col sm:flex-row" 
+  >
+    <div class=" sm:w-2/3 w-full ">
+      <img
+        class="h-full w-full object-cover sm:rounded-xl rounded-t-xl"
+        src="../../../../assets/images/cookingpic1.jpg"
+        alt="Random image"
+      />
+    </div>
+    <div class="sm:w-1/3 w-full items-center justify-center text-center flex">
+      <h1 class="text-4xl px-4 font-bold my-12 sm:my-0 sm:text-5xl">
+        Make Amazing Dishes For Your Friend And Family.
       </h1>
     </div>
-  </div>
-  <!-- button div -->
-  <div class="md:pt-64 pt-28 sm:pt-40">
-    <a routerLink="/meals" class="relative inline-block px-4 py-2 font-medium group text-3xl font-spartan">
-      <span
-        class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-indigo-300 group-hover:-translate-x-0 group-hover:-translate-y-0 rounded-lg"
-      ></span>
-      <span
-        class="absolute inset-0 w-full h-full bg-teal-200 border-2 border-teal-50 group-hover:bg-indigo-600 rounded-lg"
-      ></span>
-      <span class="relative text-indigo-950 group-hover:text-primary-teal"
-        >Meal</span
-      >
-    </a>
   </div>
 </div>
 <app-footer></app-footer>
