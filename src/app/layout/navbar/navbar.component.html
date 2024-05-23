@@ -60,20 +60,20 @@
     </div>
     <div class="flex md:hidden">
         <div
-            class="mt-6 w-1/2 text-left font-spartan text-4xl font-semibold text-colors-accent"
+            class="mt-6 w-1/2 text-left font-spartan text-4xl font-semibold text-colors-text"
         >
-            <a routerLink="/home" class="p-4"> Recipe </a>
+            <a routerLink="/home" class="p-4"> Recipes </a>
         </div>
         <div class="dropdown-end dropdown w-1/2 p-4 text-right">
-            <button tabindex="0" class="btn m-1 bg-colors-accent text-colors-text">
+            <button tabindex="0" class="btn m-1 bg-colors-secondary text-colors-text">
                 <fa-icon [icon]="faBars"></fa-icon>
             </button>
             <ul
                 tabindex="0"
-                class="dropdown-content menu rounded-box z-[4] w-32 bg-primary p-2 text-colors-text shadow bg-colors-accent"
+                class="dropdown-content menu rounded-box z-[4] w-32 bg-primary p-2 text-colors-text shadow bg-colors-secondary"
             >
                 <li><a routerLink="/home"> Home</a></li>
-                <li><a routerLink="/search">Search</a></li>
+                <li><a routerLink="/meals">Search</a></li>
                 <li><a routerLink="/about">About</a></li>
             </ul>
         </div>
