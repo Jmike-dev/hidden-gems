@@ -15,7 +15,7 @@ export class MealsComponent {
 
   search(){
     if(!this.mealInput){
-      alert('pleas enter something');
+      alert('kindly Type In One Ingrident');
       return;
     }
     this.foodService.searchMeals(this.mealInput).subscribe((data) => {this.meals = data.results;})
