@@ -1,4 +1,4 @@
-<div class="w-full h-screen font-spartan">
+<div class="w-full h-screen font-spartan bg-colors-background">
   <!-- input div  -->
   <div
     class="bg-colors-accent p-1 flex justify-center sm:w-1/4 w-3/4 mx-auto rounded-full"
@@ -14,35 +14,38 @@
       class="py-4 w-full rounded-full text-center bg-colors-background text-colors-text text-2xl"
     />
   </div>
+  <div class="bg-colors-background min-h-screen">
+    <div
+      *ngIf="meals"
+      class="gap-12 mt-10 grid sm:grid-cols-3 grid-cols-1 place-items-center mx-2 bg-colors-background min-h-screen"
+    >
+      <div *ngFor="let meal of meals" class="rounded-lg w-10/12 h-72 relative">
+        <img
+          src="{{ meal.image }}"
+          class="w-full object-cover rounded-xl h-full"
+        />
 
-  <div
-    *ngIf="meals"
-    class="gap-12 mt-10 grid sm:grid-cols-3 grid-cols-1 place-items-center mx-2"
-  >
-    <div *ngFor="let meal of meals" class="rounded-lg w-10/12 h-72 relative">
-      <img
-        src="{{ meal.image }}"
-        class="w-full object-cover rounded-xl h-full"
-      />
-
-      <div class="absolute inset-0 bg-gray-700 opacity-30 rounded-xl"></div>
-      <div
-        class="absolute inset-0 flex flex-col items-center justify-center text-center"
-      >
-        <h2 class="text-white text-3xl font-bold sm:text-xl">
-          {{ meal.title }}
-        </h2>
+        <div class="absolute inset-0 bg-gray-700 opacity-30 rounded-xl"></div>
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center text-center"
+        >
+          <h2 class="text-white text-3xl font-bold sm:text-xl">
+            {{ meal.title }}
+          </h2>
+        </div>
       </div>
     </div>
   </div>
-  <!-- <div
-    class="gap-12 mt-10 grid sm:grid-cols-3 grid-cols-1 place-items-center mx-2"
-  >
-    <app-restaurants-page />
-    <app-restaurants-page />
-    <app-restaurants-page />
-    <app-restaurants-page />
-    <app-restaurants-page />
-    <app-restaurants-page />
+  <!-- <div class="bg-colors-background">
+    <div
+      class="gap-12 mt-10 grid sm:grid-cols-3 grid-cols-1 place-items-center mx-2 min-h-screen w-full"
+    >
+      <app-restaurants-page />
+      <app-restaurants-page />
+      <app-restaurants-page />
+      <app-restaurants-page />
+      <app-restaurants-page />
+      <app-restaurants-page />
+    </div>
   </div> -->
 </div>
