@@ -7,6 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {  MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 // import player from 'lottie-web';
 //  components
 import { AppComponent } from './app.component';
@@ -49,8 +51,10 @@ const routes: Routes = [
     FontAwesomeModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    // LottieModule.forRoot({ player: playerFactory }),
     BrowserAnimationsModule,
+    MatDialogModule,
+    MatButtonModule,
+    // LottieModule.forRoot({ player: playerFactory }),
   ],
   providers: [],
   bootstrap: [AppComponent],
