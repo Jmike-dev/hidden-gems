@@ -16,7 +16,9 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { AboutComponent } from './pages/about/about/about.component';
 import { MealsComponent } from './pages/meals/meals.component';
 import { FooterComponent } from './layout/footer/footer.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 // defining routes
 const routes: Routes = [
@@ -39,6 +41,7 @@ const routes: Routes = [
     AboutComponent,
     MealsComponent,
     FooterComponent,
+   
   ],
   imports: [
     BrowserModule,
