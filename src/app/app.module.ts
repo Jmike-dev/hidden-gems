@@ -18,6 +18,7 @@ import { MealsComponent } from './pages/meals/meals.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RecipeDialogComponent } from './utils/recipe-dialog/recipe-dialog.component';
 
 
 // defining routes
@@ -41,6 +42,7 @@ const routes: Routes = [
     AboutComponent,
     MealsComponent,
     FooterComponent,
+    RecipeDialogComponent,
    
   ],
   imports: [
