@@ -1,7 +1,7 @@
 // modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 // import { LottieModule } from 'ngx-lottie';
 import { AppRoutingModule } from './app-routing.module';
@@ -33,29 +33,20 @@ const routes: Routes = [
 // export function playerFactory() {
 //   return player;
 // }
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomePageComponent,
-    RestaurantsPageComponent,
-    NavbarComponent,
-    AboutComponent,
-    MealsComponent,
-    FooterComponent,
-    RecipeDialogComponent,
-   
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    FontAwesomeModule,
-    FormsModule,
-    RouterModule.forRoot(routes),
-    // LottieModule.forRoot({ player: playerFactory }),
-    BrowserAnimationsModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomePageComponent,
+        RestaurantsPageComponent,
+        NavbarComponent,
+        AboutComponent,
+        MealsComponent,
+        FooterComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        FontAwesomeModule,
+        FormsModule,
+        RouterModule.forRoot(routes),
+        // LottieModule.forRoot({ player: playerFactory }),
+        BrowserAnimationsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
