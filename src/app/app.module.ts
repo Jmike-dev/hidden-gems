@@ -7,6 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgOptimizedImage } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import player from 'lottie-web';
 //  components
 import { AppComponent } from './app.component';
@@ -17,7 +19,6 @@ import { AboutComponent } from './pages/about/about/about.component';
 import { MealsComponent } from './pages/meals/meals.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 // defining routes
@@ -45,6 +46,7 @@ const routes: Routes = [
         AppRoutingModule,
         FontAwesomeModule,
         FormsModule,
+        NgOptimizedImage,
         RouterModule.forRoot(routes),
         // LottieModule.forRoot({ player: playerFactory }),
         BrowserAnimationsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
