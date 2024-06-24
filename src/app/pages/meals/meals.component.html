@@ -1,19 +1,37 @@
 <div class="w-full h-screen font-spartan bg-colors-background">
   <!-- input div  -->
-  <div
+  <form
+    (submit)="search()"
+    [formGroup]="appForm"
     class="bg-colors-accent p-1 flex justify-center sm:w-1/4 w-3/4 mx-auto rounded-full"
-    type="submit"
   >
     <!-- text input -->
     <input
-      [(ngModel)]="mealInput"
+      formControlName="mealInput"
       name="mealInput"
       type="text"
       placeholder="Search Your Next Meal"
-      (input)="search()"
-      class="py-4 w-full rounded-full text-center bg-colors-background text-colors-text text-2xl"
+      class="py-4 w-full rounded-full text-center bg-colors-background text-colors-text sm:text-2xl text-xl"
     />
-  </div>
+    <div class="px-1 my-auto">
+      <button
+        type="submit"
+        class="relative inline-flex items-center justify-start px-5 py-2 overflow-hidden font-bold rounded-full group bg-colors-secondary sm:text-2xl text-xl"
+      >
+        <span
+          class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-colors-text opacity-[3%]"
+        ></span>
+        <span
+          class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-colors-text opacity-100 group-hover:-translate-x-8"
+        ></span>
+        <h1
+          class="relative w-full text-colors-text transition-colors duration-200 ease-in-out group-hover:text-colors-background mx-auto"
+        >
+          Search
+        </h1>
+      </button>
+    </div>
+  </form>
   <div class="bg-colors-background min-h-screen">
     <div
       *ngIf="meals"
@@ -48,4 +66,5 @@
       <app-restaurants-page />
     </div>
   </div> -->
+  <!-- <app-recipe-dialog></app-recipe-dialog> -->
 </div>
