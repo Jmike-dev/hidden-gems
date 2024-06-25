@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { enviroment } from 'src/enviroments/environment';
 import { Observable } from 'rxjs';
 import { ResponseInstance } from 'src/interfaces/MenuItems';
+import { API_config } from 'src/env/API_config';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FoodsService {
-  private apiSearchUrl = enviroment.apiUrl;
-  private apiKey = enviroment.apiKey;
+  private apiSearchUrl = API_config.apiUrl;
+  private apiKey = API_config.apiKey;
 
   constructor(private http: HttpClient) {}
 
