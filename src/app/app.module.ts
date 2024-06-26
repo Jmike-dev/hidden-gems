@@ -1,14 +1,14 @@
 // modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 // import { LottieModule } from 'ngx-lottie';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {  MatDialogModule } from '@angular/material/dialog';
-import { MatButtonModule } from '@angular/material/button';
+import { NgOptimizedImage } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import player from 'lottie-web';
 //  components
 import { AppComponent } from './app.component';
@@ -18,8 +18,8 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { AboutComponent } from './pages/about/about/about.component';
 import { MealsComponent } from './pages/meals/meals.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppPopupComponent } from './utils/app-popup/app-popup.component';
+
+
 
 // defining routes
 const routes: Routes = [
@@ -33,30 +33,21 @@ const routes: Routes = [
 // export function playerFactory() {
 //   return player;
 // }
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomePageComponent,
-    RestaurantsPageComponent,
-    NavbarComponent,
-    AboutComponent,
-    MealsComponent,
-    FooterComponent,
-    AppPopupComponent,
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    FontAwesomeModule,
-    FormsModule,
-    RouterModule.forRoot(routes),
-    BrowserAnimationsModule,
-    MatDialogModule,
-    MatButtonModule,
-    // LottieModule.forRoot({ player: playerFactory }),
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomePageComponent,
+        RestaurantsPageComponent,
+        NavbarComponent,
+        AboutComponent,
+        MealsComponent,
+        FooterComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        FontAwesomeModule,
+        FormsModule,
+        NgOptimizedImage,
+        RouterModule.forRoot(routes),
+        // LottieModule.forRoot({ player: playerFactory }),
+        BrowserAnimationsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}

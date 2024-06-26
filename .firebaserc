@@ -1,8 +1,10 @@
 {
   "projects": {
     "default": "food-website-2cb33",
-    "food-website": "food-website-2cb33"
+    "food-website": "food-website-2cb33",
+    "live": "food-website-2cb33"
   },
   "targets": {},
-  "etags": {}
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
