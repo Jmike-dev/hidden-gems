@@ -3,13 +3,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-// import { LottieModule } from 'ngx-lottie';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgOptimizedImage } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import player from 'lottie-web';
 //  components
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home/home-page/home-page.component';
@@ -29,17 +27,13 @@ const routes: Routes = [
   { path: 'meals', component: MealsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
-// setting up lottie
-// export function playerFactory() {
-//   return player;
-// }
+
 @NgModule({ declarations: [
         AppComponent,
         HomePageComponent,
         RestaurantsPageComponent,
         NavbarComponent,
         AboutComponent,
-        MealsComponent,
         FooterComponent,
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
@@ -48,6 +42,5 @@ const routes: Routes = [
         FormsModule,
         NgOptimizedImage,
         RouterModule.forRoot(routes),
-        // LottieModule.forRoot({ player: playerFactory }),
         BrowserAnimationsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
