@@ -8,6 +8,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { provideAnimations } from "@angular/platform-browser/animations";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { AppRoutingModule } from "./app/app-routing.module";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
     providers: [
@@ -20,6 +21,6 @@ export const appConfig: ApplicationConfig = {
         ),
         provideHttpClient(withInterceptorsFromDi()),
         provideRouter(routes),
-        provideAnimations(),
+        provideAnimations(), provideAnimationsAsync(),
     ],
 };
