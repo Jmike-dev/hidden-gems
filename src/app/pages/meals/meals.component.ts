@@ -13,8 +13,6 @@ import {AppDialogComponent} from 'src/app/utils/app-dialog/app-dialog.component'
     imports: [
         CommonModule,
         ReactiveFormsModule,
-        RouterOutlet,
-        RouterLink,
         RestaurantsPageComponent,
         AppDialogComponent,
     ],
@@ -32,7 +30,7 @@ export class MealsComponent {
     });
     meals: ResultInstance[] | undefined;
 
-    search() {
+    searchMeal() {
         if (!this.appForm.value.mealInput) {
             alert('kindly Type In One Ingrident');
             return;
