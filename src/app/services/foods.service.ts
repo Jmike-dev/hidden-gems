@@ -1,8 +1,11 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { ResponseInstance } from 'src/interfaces/MenuItems';
-import { API_config } from 'src/env/API_config';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {
+    MealInstance,
+    RecipeInformationInsatance,
+} from 'src/interfaces/RecipeItems';
+import {API_config} from 'src/env/API_config';
 
 @Injectable({
     providedIn: 'root',
@@ -13,16 +16,18 @@ export class FoodsService {
 
     constructor(private http: HttpClient) {}
 
-    searchMeals(query: string): Observable<ResponseInstance> {
-        let data = this.http.get<ResponseInstance>(
+    searchMeals(query: string): Observable<MealInstance> {
+        let data = this.http.get<MealInstance>(
             `${this.apiSearchUrl}/recipes/complexSearch?apiKey=${this.apiKey}&query=${query}`
         );
         return data;
     }
 
-    searchIngredients(query: string): Observable<ResponseInstance> {
-        let ingredients = this.http.get<ResponseInstance>(
-            `${this.apiSearchUrl}/recipes/complexSearch?apiKey=${this.apiKey}&query=${query}`
+    searchIngredients(
+        RecipeID: Number
+    ): Observable<RecipeInformationInsatance> {
+        let ingredients = this.http.get<RecipeInformationInsatance>(
+            `${this.apiSearchUrl}/recipes/${RecipeID}/information?apiKey=${this.apiKey}`
         );
         return ingredients;
     }
