@@ -1,9 +1,8 @@
 import {Component, inject, ChangeDetectionStrategy} from '@angular/core';
 import {FoodsService} from 'src/app/services/foods.service';
-import {ResultInstance} from 'src/interfaces/MenuItems';
+import {RecipeInstance} from 'src/interfaces/RecipeItems';
 import {CommonModule} from '@angular/common';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
-import {RouterLink, RouterOutlet} from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import {RestaurantsPageComponent} from '../restaurants/restaurants-page/restaurants-page.component';
 import {AppDialogComponent} from 'src/app/utils/app-dialog/app-dialog.component';
@@ -28,7 +27,7 @@ export class MealsComponent {
     appForm = new FormGroup({
         mealInput: new FormControl(''),
     });
-    meals: ResultInstance[] | undefined;
+    meals: RecipeInstance[] | undefined;
 
     searchMeal() {
         if (!this.appForm.value.mealInput) {
