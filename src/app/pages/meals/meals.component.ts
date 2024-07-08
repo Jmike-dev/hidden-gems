@@ -6,6 +6,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { RestaurantsPageComponent } from '../restaurants/restaurants-page/restaurants-page.component';
 import { AppDialogComponent } from 'src/app/utils/app-dialog/app-dialog.component';
+import { MealInfoCardComponent } from 'src/app/utils/meal-info-card/meal-info-card.component';
 @Component({
     selector: 'app-meals',
     templateUrl: './meals.component.html',
@@ -14,6 +15,7 @@ import { AppDialogComponent } from 'src/app/utils/app-dialog/app-dialog.componen
         ReactiveFormsModule,
         RestaurantsPageComponent,
         AppDialogComponent,
+        MealInfoCardComponent,
     ],
     standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
