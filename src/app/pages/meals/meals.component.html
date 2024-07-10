@@ -37,13 +37,12 @@
             *ngIf="meals"
             class="mx-2 mt-10 grid min-h-screen grid-cols-1 place-items-center gap-12 bg-colors-background sm:grid-cols-3"
         >
-            <div *ngFor="let meal of meals">
-                <app-meal-info-card
-                    [MealId]="meal.id"
-                    [MealImage]="meal.image"
-                    [MealTitle]="meal.title"
-                />
-            </div>
+            <app-meal-info-card
+                *ngFor="let meal of meals"
+                [MealId]="meal.id"
+                [MealImage]="meal.image"
+                [MealTitle]="meal.title"
+            />
         </div>
     </div>
 </div>

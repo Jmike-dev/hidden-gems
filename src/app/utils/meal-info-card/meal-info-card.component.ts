@@ -40,7 +40,6 @@ export class MealInfoCardComponent {
     showData() {
         this.foodService.searchIngredients(this.MealId).subscribe((data) => {
             this.ingredientInfo = data.extendedIngredients;
-            console.log(data.instructions);
             this.openRecipeDialog(
                 data.title,
                 data.instructions,
