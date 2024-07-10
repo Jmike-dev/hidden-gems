@@ -22,19 +22,31 @@ export class MealInfoCardComponent {
 
     ingredientInfo: IngredientsInstance[] | undefined;
 
-    openRecipeDialog(recipeTitle: string, recipeInstructions: string) {
+    openRecipeDialog(
+        recipeTitle: string,
+        recipeInstructions: string,
+        enterAnimationDuration: string,
+        exitAnimationDuration: string
+    ) {
         this.dialog.open(AppDialogComponent, {
             data: {
                 recipeTitle: recipeTitle,
                 recipeInstructions: recipeInstructions,
             },
+            enterAnimationDuration,
+            exitAnimationDuration,
         });
     }
     showData() {
         this.foodService.searchIngredients(this.MealId).subscribe((data) => {
             this.ingredientInfo = data.extendedIngredients;
             console.log(data.instructions);
-            this.openRecipeDialog(data.title, data.instructions);
+            this.openRecipeDialog(
+                data.title,
+                data.instructions,
+                '400ms',
+                '400ms'
+            );
         });
     }
 }
