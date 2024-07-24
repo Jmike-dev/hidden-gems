@@ -5,8 +5,6 @@ import { FooterComponent } from '../../../layout/footer/footer.component';
     selector: 'app-about',
     templateUrl: './about.component.html',
     standalone: true,
-    imports: [FooterComponent]
+    imports: [FooterComponent],
 })
-export class AboutComponent {
-
-}
+export class AboutComponent {}

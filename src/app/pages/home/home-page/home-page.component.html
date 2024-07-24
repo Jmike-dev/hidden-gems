@@ -1,57 +1,59 @@
 <div class="bg-colors-background">
-  <div class="relative sm:max-w-7xl max-w-sm mx-auto sm:my-20 my-10 h-96">
-    <img
-      class="h-full w-full object-cover rounded-xl"
-      ngSrc="../../../../assets/images/cookingpic2.jpg"
-      alt="Random image"
-      fill
-      priority
-    />
-    <div class="absolute inset-0 bg-gray-700 opacity-60 rounded-xl"></div>
-    <div
-      class="absolute inset-0 flex flex-col items-center justify-center text-center"
-    >
-      <h2 class="text-white text-3xl font-bold sm:text-5xl">
-        Cook Delicious Food With Amazing Recipes
-      </h2>
-      <div class="mt-10">
-        <a
-          routerLink="/meals"
-          class="relative inline-flex items-center justify-start px-5 py-3 overflow-hidden font-medium transition-all bg-colors-secondary rounded-full hover:bg-colors-accent group"
-        >
-          <span
-            class="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-colors-accent rounded-full"
-          ></span>
-          <span
-            class="relative w-full text-left text-colors-text transition-colors duration-200 ease-in-out group-hover:text-colors-primary sm:text-2xl text-xl"
-            >Try Now</span
-          >
-        </a>
-      </div>
-    </div>
-  </div>
-  <div>
-    <div
-      class="relative sm:max-w-screen-2xl max-w-sm mx-auto sm:my-20 my-10 rounded-xl bg-colors-secondary flex h-5/6 text-colors-text font-spartan flex-col sm:flex-row"
-    >
-      <div class="sm:w-2/3 w-full sm:h-5/6">
+    <div class="relative mx-auto my-10 h-96 max-w-sm sm:my-20 sm:max-w-7xl">
         <img
-          class="h-full w-full object-cover sm:rounded-xl rounded-t-xl"
-          ngSrc="../../../../assets/images/cookingpic1.jpg"
-          alt="Random image"
-          width="2100"
-          height="1400"
-          priority
+            class="h-full w-full rounded-xl object-cover"
+            ngSrc="../../../../assets/images/cookingpic2.jpg"
+            alt="Random image"
+            fill
+            priority
         />
-      </div>
-      <div class="sm:w-1/3 w-full items-center justify-center text-center flex">
-        <h1 class="text-4xl px-4 font-bold my-12 sm:my-0 sm:text-5xl">
-          Make Amazing Dishes For Your Friends And Families.
-        </h1>
-      </div>
+        <div class="absolute inset-0 rounded-xl bg-gray-700 opacity-60"></div>
+        <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center"
+        >
+            <h2 class="text-3xl font-bold text-white sm:text-5xl">
+                Cook Delicious Food With Amazing Recipes
+            </h2>
+            <div class="mt-10">
+                <a
+                    routerLink="/meals"
+                    class="group relative inline-flex items-center justify-start overflow-hidden rounded-full bg-colors-secondary px-5 py-3 font-medium transition-all hover:bg-colors-accent"
+                >
+                    <span
+                        class="absolute inset-0 rounded-full border-0 border-colors-accent transition-all duration-100 ease-linear group-hover:border-[25px]"
+                    ></span>
+                    <span
+                        class="relative w-full text-left text-xl text-colors-text transition-colors duration-200 ease-in-out group-hover:text-colors-primary sm:text-2xl"
+                        >Try Now</span
+                    >
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="mt-44">
-    <app-footer />
-  </div>
+    <div>
+        <div
+            class="relative mx-auto my-10 flex h-5/6 max-w-sm flex-col rounded-xl bg-colors-secondary font-spartan text-colors-text sm:my-20 sm:max-w-screen-2xl sm:flex-row"
+        >
+            <div class="w-full sm:h-5/6 sm:w-2/3">
+                <img
+                    class="h-full w-full rounded-t-xl object-cover sm:rounded-xl"
+                    ngSrc="../../../../assets/images/cookingpic1.jpg"
+                    alt="Random image"
+                    width="2100"
+                    height="1400"
+                    priority
+                />
+            </div>
+            <div
+                class="flex w-full items-center justify-center text-center sm:w-1/3"
+            >
+                <h1 class="my-12 px-4 text-4xl font-bold sm:my-0 sm:text-5xl">
+                    Make Amazing Dishes For Your Friends And Families.
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="mt-44">
+        <app-footer />
+    </div>
 </div>

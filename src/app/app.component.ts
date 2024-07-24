@@ -7,8 +7,8 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     standalone: true,
-    imports: [NavbarComponent, RouterOutlet]
+    imports: [NavbarComponent, RouterOutlet],
 })
 export class AppComponent {
-  title = 'hidden_gems';
+    title = 'hidden_gems';
 }

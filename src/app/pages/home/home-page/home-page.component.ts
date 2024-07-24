@@ -8,15 +8,8 @@ import { RouterLink } from '@angular/router';
     selector: 'app-home-page',
     templateUrl: './home-page.component.html',
     standalone: true,
-    imports: [
-        NgOptimizedImage,
-        RouterLink,
-        FooterComponent,
-    ],
+    imports: [NgOptimizedImage, RouterLink, FooterComponent],
 })
 export class HomePageComponent {
- 
-  constructor() {}
-
-
+    constructor() {}
 }
