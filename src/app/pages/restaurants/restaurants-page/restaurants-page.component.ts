@@ -5,8 +5,6 @@ import { RouterLink } from '@angular/router';
     selector: 'app-restaurants-page',
     templateUrl: './restaurants-page.component.html',
     standalone: true,
-    imports: [RouterLink]
+    imports: [RouterLink],
 })
-export class RestaurantsPageComponent {
-
-}
+export class RestaurantsPageComponent {}

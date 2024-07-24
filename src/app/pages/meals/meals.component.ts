@@ -17,7 +17,6 @@ import { MealInfoCardComponent } from 'src/app/utils/meal-info-card/meal-info-ca
     standalone: true,
 })
 export class MealsComponent {
-
     constructor(private foodService: FoodsService) {}
     appForm = new FormGroup({
         mealInput: new FormControl(''),

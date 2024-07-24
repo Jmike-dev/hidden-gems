@@ -6,6 +6,7 @@ import {
     MatDialogClose,
     MAT_DIALOG_DATA,
 } from '@angular/material/dialog';
+// import { SafeHtml } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-app-dialog',
@@ -28,4 +29,7 @@ export class AppDialogComponent {
             recipeInstructions: string;
         }
     ) {}
+    Instructions: string = this.data.recipeInstructions;
+
+    // abstract bypassSecurityTrustHtml(instructions: string):SafeHtml
 }

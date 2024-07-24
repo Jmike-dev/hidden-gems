@@ -1,11 +1,11 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import {
     MealInstance,
     RecipeInformationInsatance,
 } from 'src/interfaces/RecipeItems';
-import {API_config} from 'src/env/API_config';
+import { API_config } from 'src/env/API_config';
 
 @Injectable({
     providedIn: 'root',

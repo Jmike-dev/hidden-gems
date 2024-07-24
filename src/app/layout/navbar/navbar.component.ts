@@ -7,10 +7,8 @@ import { RouterLink } from '@angular/router';
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
     standalone: true,
-    imports: [RouterLink, FaIconComponent]
+    imports: [RouterLink, FaIconComponent],
 })
 export class NavbarComponent {
-
-   faBars = faBars;
+    faBars = faBars;
 }
-
