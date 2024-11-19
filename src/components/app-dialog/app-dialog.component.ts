@@ -6,6 +6,7 @@ import {
     MatDialogClose,
     MAT_DIALOG_DATA,
 } from '@angular/material/dialog';
+import { ButtonComponent } from '../button/button.component';
 // import { SafeHtml } from '@angular/platform-browser';
 
 @Component({
@@ -17,10 +18,12 @@ import {
         MatDialogContent,
         MatDialogActions,
         MatDialogClose,
+        ButtonComponent
     ],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppDialogComponent {
+[x: string]: any;
     constructor(
         @Inject(MAT_DIALOG_DATA)
         public data: {
