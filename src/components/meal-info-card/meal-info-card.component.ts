@@ -31,7 +31,11 @@ export class MealInfoCardComponent {
         this.dialog.open(AppDialogComponent, {
             data: {
                 recipeTitle: recipeTitle,
-                recipeInstructions: recipeInstructions,
+                recipeInstructions: recipeInstructions
+                    .replaceAll('<ol>', '')
+                    .replaceAll('</ol>', '')
+                    .replaceAll('<li>', '')
+                    .replaceAll('</li>', ''),
             },
             enterAnimationDuration,
             exitAnimationDuration,
