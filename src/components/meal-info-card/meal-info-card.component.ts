@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AppDialogComponent } from '../app-dialog/app-dialog.component';
-import { IngredientsInstance } from 'src/interfaces/RecipeItems';
-import { FoodsService } from 'src/app/services/foods.service';
+import { IngredientsInstance } from 'src/models/RecipeItems';
+import { FoodsService } from 'src/services/foods.service';
 
 @Component({
     selector: 'app-meal-info-card',

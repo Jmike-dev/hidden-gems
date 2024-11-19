@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { FoodsService } from 'src/app/services/foods.service';
-import { RecipeInstance } from 'src/interfaces/RecipeItems';
+import { FoodsService } from 'src/services/foods.service';
+import { RecipeInstance } from 'src/models/RecipeItems';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RestaurantsPageComponent } from '../restaurants/restaurants-page/restaurants-page.component';
-import { MealInfoCardComponent } from 'src/app/utils/meal-info-card/meal-info-card.component';
+import { MealInfoCardComponent } from 'src/components/meal-info-card/meal-info-card.component';
 @Component({
     selector: 'app-meals',
     templateUrl: './meals.component.html',
