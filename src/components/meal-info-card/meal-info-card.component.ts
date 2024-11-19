@@ -3,11 +3,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { AppDialogComponent } from '../app-dialog/app-dialog.component';
 import { IngredientsInstance } from 'src/models/RecipeItems';
 import { FoodsService } from 'src/services/foods.service';
+import { ButtonComponent } from '../button/button.component';
 
 @Component({
     selector: 'app-meal-info-card',
     standalone: true,
-    imports: [],
+    imports: [ButtonComponent],
     templateUrl: './meal-info-card.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
