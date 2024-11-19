@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import {
     MealInstance,
     RecipeInformationInsatance,
-} from 'src/interfaces/RecipeItems';
+} from 'src/models/RecipeItems';
 import { API_config } from 'src/env/API_config';
 
 @Injectable({
