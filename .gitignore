@@ -6,8 +6,7 @@
 /out-tsc
 /bazel-out
 /src/env
-/.firebase
-
+*.cache
 # Node
 /node_modules
 npm-debug.log
