@@ -1,10 +1,16 @@
 {
-  "projects": {
-    "default": "food-website-2cb33",
-    "food-website": "food-website-2cb33",
-    "live": "food-website-2cb33"
-  },
-  "targets": {},
-  "etags": {},
-  "dataconnectEmulatorConfig": {}
+    "projects": {
+        "default": "food-website-2cb33"
+    },
+    "targets": {
+      "food-website-2cb33":{
+        "hosting":{
+          "food-chakula":[
+            "food-chakula"
+          ]
+        }
+      }
+    },
+    "etags": {},
+    "dataconnectEmulatorConfig": {}
 }
