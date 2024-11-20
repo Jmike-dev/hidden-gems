@@ -1,6 +1,7 @@
 {
     "hosting": {
         "public": "dist/browser",
+        "target":"food-chakula",
         "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
         "rewrites": [
             {
